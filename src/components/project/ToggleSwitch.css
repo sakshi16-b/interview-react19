@@ -1,0 +1,44 @@
+.toggle-switch {
+  width: 100px;
+  height: 50px;
+  background-color: #ccc;
+  border: 10px;
+  border-radius: 25px;
+  border: 0.2rem solid #ccc !important;
+  position: relative;
+  cursor: pointer;
+  padding: 5px;
+  margin-top: 5rem;
+  box-shadow: rgba(17, 12, 46, 0.15) 0px 48px 100px 0px;
+}
+
+.switch {
+  height: 40px;
+  width: 40px;
+  position: absolute;
+  border-radius: 20px;
+  display: flex;
+  color: white;
+  align-items: center;
+  justify-content: center;
+  top: 5px;
+  left: 5px;
+  border: 0.2rem solid #ccc !important;
+  font-weight: bold;
+  box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+}
+/* switch shift to the right side */
+.on {
+  background-color: #4caf50;
+  transform: translateX(50px);
+  -webkit-transform: translateX(50px);
+  -moz-transform: translateX(50px);
+  -ms-transform: translateX(50px);
+  -o-transform: translateX(50px);
+}
+/* switch shift to the original side */
+
+.off {
+  background-color: #f44336;
+  transform: translateX(0px);
+}
