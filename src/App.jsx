@@ -12,6 +12,15 @@ import ToDo from "./components/project/ToDo/ToDo";
 import DigitalClock from "./components/DigitalClock/DigitalClock";
 import { Keys } from "./components/project/keys";
 import ShortCircuitExample from "./components/hooks/ShortCircuit";
+import Counter from "./components/hooks/UseState";
+import AdvancedCounter from "./components/hooks/UseState/AdvancedCounter";
+import UnControlled from "./components/hooks/UseState/UnControlled";
+import Controlled from "./components/hooks/UseState/Controlled";
+import RegistrationForm from "./components/hooks/UseState/Registration";
+import RegistrationReact from "./components/hooks/UseState/RegistrationReact";
+import LoginForm from "./components/hooks/UseState/LoginForm";
+import ContactForm from "./components/hooks/UseState/ContactForm";
+import ContactFormObj from "./components/hooks/UseState/ContactFormObj";
 //  import './App.css'
 //  import './index.css'
 // import { Footer } from "./components/NetflixSeries";
@@ -36,7 +45,16 @@ function App() {
       {/* <ToDo/> */}
       {/* <DigitalClock/> */}
       {/* <Keys/> */}
-      <ShortCircuitExample />
+      {/* <ShortCircuitExample /> */}
+      {/* <Counter/> */}
+      {/* <AdvancedCounter/> */}
+      {/* <UnControlled/> */}
+      {/* <Controlled/> */}
+      {/* <RegistrationForm/> */}
+      {/* <RegistrationReact/> */}
+      {/* <LoginForm/> */}
+      {/* <ContactForm/> */}
+      <ContactFormObj/>
 
     </section>
   )
