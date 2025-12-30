@@ -21,6 +21,9 @@ import RegistrationReact from "./components/hooks/UseState/RegistrationReact";
 import LoginForm from "./components/hooks/UseState/LoginForm";
 import ContactForm from "./components/hooks/UseState/ContactForm";
 import ContactFormObj from "./components/hooks/UseState/ContactFormObj";
+import { ReactUseEffect } from "./components/hooks/useEffect";
+import Challenge from "./components/hooks/useEffect/Challenge";
+import CleanUp from "./components/hooks/useEffect/CleanUp";
 //  import './App.css'
 //  import './index.css'
 // import { Footer } from "./components/NetflixSeries";
@@ -54,7 +57,10 @@ function App() {
       {/* <RegistrationReact/> */}
       {/* <LoginForm/> */}
       {/* <ContactForm/> */}
-      <ContactFormObj/>
+      {/* <ContactFormObj/> */}
+      {/* <ReactUseEffect/> */}
+      {/* <Challenge/> */}
+      <CleanUp/>
 
     </section>
   )

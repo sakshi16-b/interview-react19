@@ -1,0 +1,26 @@
+import { useEffect, useState } from 'react'
+import './index.css'
+
+
+export const ReactUseEffect = () => {
+    const [count, setCount] = useState(0)
+
+    useEffect(() => {
+        console.log("This is useEffect")
+        console.log(count)
+        setInterval(()=>(
+        setCount(new Date().toLocaleTimeString())
+    ),1000)
+
+    }, [])
+    return (
+        <div className='container effect-container'>
+            <h1>Hello useEffect</h1>
+            <p>Count:{count}</p>
+            {/* <button onClick={() => setCount(count + 1)}>Increment</button> */}
+
+
+        </div>
+
+    )
+}
