@@ -6,8 +6,8 @@ export const ReactUseEffect = () => {
     const [count, setCount] = useState(0)
 
     useEffect(() => {
-        console.log("This is useEffect")
-        console.log(count)
+        // console.log("This is useEffect")
+        // console.log(count)
         setInterval(()=>(
         setCount(new Date().toLocaleTimeString())
     ),1000)
