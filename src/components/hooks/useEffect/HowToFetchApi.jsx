@@ -1,0 +1,68 @@
+import React, { useEffect, useState } from 'react'
+import './Pokemon.css'
+const URL = "https://pokeapi.co/api/v2/pokemon/pikachu"
+
+const HowToFetchApi = () => {
+    const [pokemon, setPokemon] = useState(null)
+    const [loading, setLoading] = useState(true)
+    const [error, setError] = useState(null)
+
+    const fetchPokemon = () => {
+        fetch(URL)
+            .then((res) => res.json())
+            .then((data) => {
+                setPokemon(data)
+                setLoading(false)
+            })
+
+            .catch((error) => {
+                setError(error);
+                setLoading(false);
+            })
+    }
+
+
+
+    useEffect(() => {
+        fetchPokemon();
+
+    }, [])
+
+    console.log(pokemon);
+
+    if (loading)
+        return (
+            <div><h1>Loading...</h1></div>
+        )
+    if (error)
+        return (
+            <div><h1>Error:{error?.message}</h1></div>
+        )
+
+
+
+    return (
+        <section className='container'>
+            <header>
+                <h1>Lets Catch pokemon</h1>
+            </header>
+            <ul className='card-demo'>
+                <li className='pokemon-card'>
+                    <figure>
+                        <img
+                            src={pokemon.sprites.other.dream_world.front_default}
+                            alt={pokemon.name}
+                            className='pokemon-image' />
+                    </figure>
+                    <h1>{pokemon.name}</h1>
+
+
+                </li>
+            </ul>
+        </section>
+
+
+    )
+}
+
+export default HowToFetchApi;

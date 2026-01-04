@@ -24,6 +24,8 @@ import ContactFormObj from "./components/hooks/UseState/ContactFormObj";
 import { ReactUseEffect } from "./components/hooks/useEffect";
 import Challenge from "./components/hooks/useEffect/Challenge";
 import CleanUp from "./components/hooks/useEffect/CleanUp";
+import HowNotToFetchApi from "./components/hooks/useEffect/HowNotToFetchApi";
+import HowToFetchApi from "./components/hooks/useEffect/HowToFetchApi";
 //  import './App.css'
 //  import './index.css'
 // import { Footer } from "./components/NetflixSeries";
@@ -34,7 +36,7 @@ import CleanUp from "./components/hooks/useEffect/CleanUp";
 
 function App() {
   return (
-    <section className="container">
+    <>
       {/* <h1 className='card-heading'>List of Best Netflix Series</h1>
       <NetflixSeries /> */}
       {/* <EventHandling/> */}
@@ -60,10 +62,12 @@ function App() {
       {/* <ContactFormObj/> */}
       {/* <ReactUseEffect/> */}
       {/* <Challenge/> */}
-      <CleanUp/>
+      {/* <CleanUp/> */}
+      {/* <HowNotToFetchApi/> */}
+       <HowToFetchApi/>
 
-    </section>
-  )
+
+    </> )
 }
 export default App;
 
