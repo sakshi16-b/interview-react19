@@ -2,26 +2,24 @@ import React, { useEffect, useState } from 'react'
 import './Pokemon.css'
 const URL = "https://pokeapi.co/api/v2/pokemon/pikachu"
 
-const HowToFetchApi = () => {
-    const [pokemon, setPokemon] = useState(null)
-    const [loading, setLoading] = useState(true)
-    const [error, setError] = useState(null)
+const FetchApiWithAsync = () => {
+    const [pokemon, setPokemon] = useState(null);
+    const [loading, setLoading] = useState(true);
+    const [error, setError] = useState(null);
+    const fetchPokemon = async () => {
+        try {
+            const res = await fetch(URL)
+            const data = await res.json()
 
-    const fetchPokemon = () => {
-        fetch(URL)
-            .then((res) => res.json())
-            .then((data) => {
-                setPokemon(data)
-                setLoading(false)
-            })
+            setPokemon(data)
+            setLoading(false)
 
-            .catch((error) => {
-                setError(error);
-                setLoading(false);
-            })
+        }
+        catch (error){
+            setError(error)
+            setLoading(false)
+        }
     }
-
-
 
     useEffect(() => {
         fetchPokemon();
@@ -38,6 +36,9 @@ const HowToFetchApi = () => {
         return (
             <div><h1>Error:{error?.message}</h1></div>
         )
+
+
+
     return (
         <section className='container'>
             <header>
@@ -62,4 +63,5 @@ const HowToFetchApi = () => {
     )
 }
 
-export default HowToFetchApi;
+
+export default FetchApiWithAsync

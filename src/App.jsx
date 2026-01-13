@@ -26,6 +26,9 @@ import Challenge from "./components/hooks/useEffect/Challenge";
 import CleanUp from "./components/hooks/useEffect/CleanUp";
 import HowNotToFetchApi from "./components/hooks/useEffect/HowNotToFetchApi";
 import HowToFetchApi from "./components/hooks/useEffect/HowToFetchApi";
+import FetchApiWithAsync from "./components/hooks/useEffect/FetchApiWithAsync";
+import UseRef from "./components/hooks/useRef";
+import UseId from "./components/hooks/useId";
 //  import './App.css'
 //  import './index.css'
 // import { Footer } from "./components/NetflixSeries";
@@ -64,10 +67,12 @@ function App() {
       {/* <Challenge/> */}
       {/* <CleanUp/> */}
       {/* <HowNotToFetchApi/> */}
-       <HowToFetchApi/>
+      {/* <HowToFetchApi/> */}
+      {/* <FetchApiWithAsync /> */}
+{/* <UseRef/> */}
+<UseId/>
 
-
-    </> )
+    </>)
 }
 export default App;
 
