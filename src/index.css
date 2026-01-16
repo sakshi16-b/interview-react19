@@ -1,5 +1,6 @@
 /* This file contains global CSS styles that apply to the entire application.
    These styles affect all components across the app. */
+@import "tailwindcss";
 
 /* Base rule */
 * {

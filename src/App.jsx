@@ -29,6 +29,11 @@ import HowToFetchApi from "./components/hooks/useEffect/HowToFetchApi";
 import FetchApiWithAsync from "./components/hooks/useEffect/FetchApiWithAsync";
 import UseRef from "./components/hooks/useRef";
 import UseId from "./components/hooks/useId";
+import { ParentComponent } from "./components/propsDrilling";
+import { BioContext, BioProvider } from "./components/ContextAPI";
+import Home from "./components/ContextAPI/Home";
+import About from "./components/ContextAPI/About";
+import Service from "./components/ContextAPI/Service";
 //  import './App.css'
 //  import './index.css'
 // import { Footer } from "./components/NetflixSeries";
@@ -69,8 +74,14 @@ function App() {
       {/* <HowNotToFetchApi/> */}
       {/* <HowToFetchApi/> */}
       {/* <FetchApiWithAsync /> */}
-{/* <UseRef/> */}
-<UseId/>
+      {/* <UseRef/> */}
+      {/* <UseId/> */}
+      {/* <ParentComponent /> */}
+      <BioProvider>
+        <Home/>
+        <About/>
+        <Service/>
+      </BioProvider>
 
     </>)
 }
