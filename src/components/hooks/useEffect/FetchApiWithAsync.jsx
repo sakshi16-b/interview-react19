@@ -15,7 +15,7 @@ const FetchApiWithAsync = () => {
             setLoading(false)
 
         }
-        catch (error){
+        catch (error) {
             setError(error)
             setLoading(false)
         }
@@ -53,6 +53,7 @@ const FetchApiWithAsync = () => {
                             className='pokemon-image' />
                     </figure>
                     <h1>{pokemon.name}</h1>
+                    
 
 
                 </li>
@@ -62,6 +63,5 @@ const FetchApiWithAsync = () => {
 
     )
 }
-
 
 export default FetchApiWithAsync
